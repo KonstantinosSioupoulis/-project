@@ -36,7 +36,7 @@ def Entropy(cprob):
     else:
         return - (cprob * math.log(cprob,2)) - ((1.0-cprob)*math.log(1.0-cprob,2))
 
-def calculateIG(pos,neg,word):#i tha yparxoyn genika kapoia apo ayta kai den tha xreaiazetai na ta perasoume
+def calculateIG(pos,neg,word):
     pc1=len(pos)/(len(pos)+len(neg))
     HC=Entropy(pc1)
     """"
@@ -48,7 +48,7 @@ def calculateIG(pos,neg,word):#i tha yparxoyn genika kapoia apo ayta kai den tha
     
     HCX1  # H(C=1|X=1)
     
-    HCX0  #H(C=1|X=0) entropies na kseroume oti to x=1 kai x=0 antistoixa
+    HCX0  #H(C=1|X=0) 
     """
     
     cX1 =0         #count the examples in which this feature x= 1
